@@ -18,4 +18,9 @@ module.exports = {
     'import/prefer-default-export': 0,
   },
   globals: {},
+  settings: {
+    "import/resolver": {
+      "nuxt-import": {}
+    }
+  }
 }

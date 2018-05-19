@@ -20,7 +20,12 @@
 </template>
 <script>
 export default {
-  props: ['error'],
+  props: {
+    error: {
+      type: Object,
+      default: () => {},
+    },
+  },
 };
 </script>
 

@@ -10,13 +10,13 @@ const users = [
 ];
 
 /* GET users listing. */
-router.get('/users', (req, res, next) => {
+router.get('/users', (req, res) => {
   res.json(users);
 });
 
 /* GET user by ID. */
-router.get('/users/:id', (req, res, next) => {
-  const id = parseInt(req.params.id);
+router.get('/users/:id', (req, res) => {
+  const id = parseInt(req.params.id, 10);
   if (id >= 0 && id < users.length) {
     res.json(users[id]);
   } else {
