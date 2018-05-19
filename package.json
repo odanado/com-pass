@@ -14,9 +14,11 @@
   "dependencies": {
     "axios": "^0.16.2",
     "cross-env": "^5.0.1",
+    "element-ui": "^2.3.9",
     "express": "^4.15.3",
     "nuxt": "^1.0.0-rc3",
     "source-map-support": "^0.4.15",
+    "vue": "^2.5.16",
     "vue-eslint-parser": "^2.0.3"
   },
   "devDependencies": {
