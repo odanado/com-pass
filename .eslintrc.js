@@ -5,12 +5,15 @@ module.exports = {
     browser: true,
     node: true
   },
-  extends: 'standard',
+  extends: ['plugin:vue/strongly-recommended', 'airbnb-base'],
   // required to lint *.vue files
   plugins: [
-    'html'
+    'vue'
   ],
   // add your custom rules here
-  rules: {},
-  globals: {}
+  rules: {
+    'no-param-reassign': [2, { 'props': false }],
+    'import/prefer-default-export': 0,
+  },
+  globals: {},
 }
