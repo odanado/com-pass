@@ -1,32 +1,41 @@
 <template>
-  <section class="container">
-    <img
-      src="~assets/img/logo.png"
-      alt="Nuxt.js Logo"
-      class="logo" >
-    <h1 class="title">
-      USERS
-    </h1>
-    <ul class="users">
-      <li
-        v-for="(user, index) in users"
-        :key="index"
-        class="user">
-        <nuxt-link :to="{ name: 'id', params: { id: index }}">
-          {{ user.name }}
-        </nuxt-link>
-      </li>
-    </ul>
-  </section>
+  <div class="top">
+    <p>
+      {{ this.user.name }} さんこんにちは
+    </p>
+    <div class="cards">
+      <EventCard
+        class="card"
+        title="タイトル"
+        place="場所"/>
+      <EventCard
+        class="card"
+        title="タイトル"
+        place="場所"/>
+    </div>
+  </div>
 </template>
 
 <script>
-import axios from '~/plugins/axios';
+import EventCard from '~/components/EventCard.vue';
+// import axios from '~/plugins/axios';
 
 export default {
+  components: {
+    EventCard,
+  },
+  data: () => ({
+    user: {
+      name: '名前',
+    },
+    event: [
+      { name: 'イベント1' },
+      { name: 'イベント2' },
+    ],
+  }),
   async asyncData() {
-    const { data } = await axios.get('/api/users');
-    return { users: data };
+    // const { data } = await axios.get('/api/users');
+    // return { users: data };
   },
   head() {
     return {
@@ -37,6 +46,18 @@ export default {
 </script>
 
 <style scoped>
+.top {
+  vertical-align: top;
+  width: 95%;
+}
+.cards {
+  margin-top: 30px;
+}
+
+.card {
+  margin-top: 20px;
+}
+
 .title
 {
   margin: 30px 0;

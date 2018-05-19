@@ -1,52 +1,52 @@
 <template>
-  <div>
-    <nuxt/>
-    <my-footer/>
-  </div>
+  <el-container>
+    <el-header>サービス名</el-header>
+    <el-main>
+      <nuxt/>
+    </el-main>
+  </el-container>
 </template>
 
-<script>
-import MyFooter from '~/components/Footer.vue';
-
-export default {
-  components: {
-    MyFooter,
-  },
-};
-</script>
 
 <style>
-.container
-{
+html {
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+  "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 24px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: border-box;
   margin: 0;
-  width: 100%;
-  padding: 100px 0;
+}
+.el-header {
+  background-color: #b3c0d1;
+  color: #333;
+  text-align: center;
+  line-height: 60px;
+}
+.el-main {
+  background-color: #e9eef3;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.button, .button:visited
-{
-  display: inline-block;
-  color: black;
-  letter-spacing: 1px;
-  background-color: #fff;
-  border: 2px solid #000;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 15px 45px;
+.el-container {
+  margin-right: auto;
+  margin-left: auto;
 }
-
-.button:hover, .button:focus
-{
-  color: #fff;
-  background-color: #000;
-}
-
-.title
-{
-  color: #000;
-  font-weight: 300;
-  font-size: 2.5em;
-  margin: 0;
+@media (min-width: 768px) {
+  .el-container {
+    width: 750px;
+  }
 }
 </style>
