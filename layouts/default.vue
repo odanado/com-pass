@@ -1,11 +1,24 @@
 <template>
   <el-container>
-    <el-header>こんぱす</el-header>
+    <el-header>
+      <Header/>
+    </el-header>
     <el-main>
       <nuxt/>
     </el-main>
   </el-container>
 </template>
+
+<script>
+import Header from '~/components/Header.vue';
+
+export default {
+  components: {
+    Header,
+  },
+
+};
+</script>
 
 
 <style>
