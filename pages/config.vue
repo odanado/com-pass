@@ -68,6 +68,8 @@ export default {
         value: '2',
       },
     ],
+    paresis: '',
+    support: '',
   }),
   methods: {
     show() {
@@ -81,7 +83,7 @@ export default {
 <style scoped>
 .el-select {
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
   height: 60px;
 }
 
@@ -103,7 +105,7 @@ export default {
   width: 100%;
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 30px;
+  margin-top: 10px;
 }
 
 
