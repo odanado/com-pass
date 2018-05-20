@@ -7,7 +7,7 @@
     <el-select
       class="selectSupport"
       v-model="support"
-      placeholder="麻痺の部位">
+      placeholder="要支援認定のレベル">
       <el-option
         v-for="item in supportList"
         size="large"
@@ -82,6 +82,12 @@ export default {
 
 
 <style scoped>
+
+.el-select-dropdown__item {
+  font-size: 30px;
+  height: 45px;
+}
+
 .el-select {
   margin-top: 30px;
   margin-bottom: 5px;

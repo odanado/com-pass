@@ -4,8 +4,10 @@ const router = Router();
 
 const events = [
   {
+    title: '【10名限定】わいわいゲートボール', name: 'スポーツ', place: '代々木公園', date: '2018/05/26', number: '10', level: { support: '1', paresis: 'one_hand' }, type: '2',
+  },
+  {
     title: '第18回　煌めき☆ボウリング & ビリヤードor卓球', name: 'スポーツ', place: '麻布十番', date: '2018/05/20', number: '10', level: { support: '1', paresis: 'one_hand' }, type: '2',
-
   },
   {
     title: '第144回　テニスを楽しもう！　in　東京　☆　～', name: 'スポーツ', place: '秋葉原', date: '2018/05/22', number: '10', level: { support: '2', paresis: 'one_hand' }, type: '1',
