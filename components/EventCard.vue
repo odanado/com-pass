@@ -24,6 +24,8 @@
       <el-tag type="success">
         {{ this.getSupport }}
       </el-tag>
+    </div>
+    <div>
       <el-tag type="success">
         {{ this.getParesis }}
       </el-tag>
@@ -70,6 +72,8 @@ export default {
 <style scoped>
 .el-tag {
   margin-right: 10px;
+  margin-top: 10px;
+  font-size: 20px;
 }
 .item {
   margin-bottom: 18px;
