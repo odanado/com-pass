@@ -29,7 +29,7 @@ router.get('/events', (req, res) => {
 router.get('/event/:id', (req, res) => {
   const id = parseInt(req.params.id, 10);
   if (id >= 0 && id < events.length) {
-    res.json(events[id].name);
+    res.json(events[id]);
   } else {
     res.sendStatus(404);
   }
