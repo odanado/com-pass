@@ -1,8 +1,8 @@
 <template>
   <div class="top">
-    <p>
-      {{ this.user.name }} さんこんにちは
-    </p>
+    <span class="title">
+      興味のあるイベントを選びましょう！
+    </span>
     <div class="cards">
       <EventCard
         class="card"
@@ -50,18 +50,10 @@ export default {
   margin-top: 20px;
 }
 
-.title
-{
-  margin: 30px 0;
-}
-.users
-{
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.user
-{
-  margin: 10px 0;
+
+.title {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 30px;
 }
 </style>
