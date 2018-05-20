@@ -6,11 +6,11 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'starter',
+    title: 'こんぱす (Community Passport)',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project' },
+      { hid: 'こんぱすは脳梗塞患者の社会復帰に向けたコミュニティを見つけられるサイトです', name: 'こんぱす', content: 'こんぱすは脳梗塞患者の社会復帰に向けたコミュニティを見つけられるサイトです' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

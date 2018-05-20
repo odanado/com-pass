@@ -1,6 +1,6 @@
 <template>
   <el-container>
-    <el-header>サービス名</el-header>
+    <el-header>こんぱす</el-header>
     <el-main>
       <nuxt/>
     </el-main>
