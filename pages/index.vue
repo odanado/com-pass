@@ -7,7 +7,7 @@
       <EventCard
         class="card"
         v-for="(event, i) in this.events"
-        v-touch="() => handleTransition(event)"
+        v-touch="() => handleTransition(i)"
         :key="i"
         :event="event"/>
     </div>
@@ -27,13 +27,11 @@ export default {
   async asyncData() {
     const user = (await axios.get('/api/user/0')).data;
     const events = (await axios.get('/api/events')).data;
-    console.log(events);
     return { user, events };
   },
   methods: {
-    handleTransition(event) {
-      console.log(event);
-      this.$router.push('/event/1');
+    handleTransition(i) {
+      this.$router.push(`/event/${i}`);
     },
   },
 };
