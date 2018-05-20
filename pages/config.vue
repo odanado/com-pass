@@ -3,17 +3,6 @@
     <span class="title">
       あなたが体の部位で麻痺している場所はどこですか？
     </span>
-    <el-select
-      class="selectParesis"
-      v-model="paresis"
-      placeholder="麻痺の部位">
-      <el-option
-        v-for="item in paresisList"
-        size="large"
-        :key="item.value"
-        :label="item.label"
-        :value="item.value"/>
-    </el-select>
 
     <el-select
       class="selectSupport"
@@ -21,6 +10,18 @@
       placeholder="麻痺の部位">
       <el-option
         v-for="item in supportList"
+        size="large"
+        :key="item.value"
+        :label="item.label"
+        :value="item.value"/>
+    </el-select>
+
+    <el-select
+      class="selectParesis"
+      v-model="paresis"
+      placeholder="麻痺の部位">
+      <el-option
+        v-for="item in paresisList"
         size="large"
         :key="item.value"
         :label="item.label"
