@@ -5,6 +5,7 @@
     </p>
 
     <el-button
+      @click="register"
       type="success"
       class="registerButton">
       このイベントに参加する！
@@ -22,6 +23,17 @@ import axios from '~/plugins/axios';
 export default {
   components: {
     EventCardDetail,
+  },
+  methods: {
+    register() {
+      // const h = this.$createElement;
+
+      this.$notify({
+        title: '登録しました！',
+        type: 'success',
+        duration: 6000,
+      });
+    },
   },
   async asyncData({ params }) {
     const event = (await axios.get(`/api/event/${params.id}`)).data;
