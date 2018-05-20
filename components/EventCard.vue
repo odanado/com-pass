@@ -5,17 +5,17 @@
       slot="header"
       class="clearfix">
       <span class="title">
-        {{ this.title }}
+        {{ this.event.title }}
       </span>
     </div>
     <div class="detail">
       <i class="el-icon-location">
-        {{ this.place }}
+        {{ this.event.place }}
       </i>
     </div>
     <div class="detail">
       <i class="el-icon-date">
-        {{ this.date }}
+        {{ this.event.date }}
       </i>
     </div>
     <div>
@@ -33,45 +33,30 @@
 <script>
 export default {
   props: {
-    title: {
-      type: String,
-      default: '',
-    },
-    place: {
-      type: String,
-      default: '',
-    },
-    date: {
-      type: String,
-      default: '2018年',
-    },
-    support: {
-      type: String,
-      default: '1',
-    },
-    paresis: {
-      type: String,
-      default: 'one_hand',
+    event: {
+      type: Object,
+      default: () => {},
     },
   },
   computed: {
     getSupport() {
-      return `要支援認定${this.support}`;
+      return `要支援認定${this.event.level.support}`;
     },
     getParesis() {
-      if (this.paresis === 'one_hand') {
+      const { paresis } = this.event.level;
+      if (paresis === 'one_hand') {
         return '片手の麻痺';
       }
-      if (this.paresis === 'two_hand') {
+      if (paresis === 'two_hand') {
         return '両手の麻痺';
       }
-      if (this.paresis === 'one_leg') {
+      if (paresis === 'one_leg') {
         return '片足の麻痺';
       }
-      if (this.paresis === 'two_leg') {
+      if (paresis === 'two_leg') {
         return '両足の麻痺';
       }
-      if (this.paresis === 'half_body') {
+      if (paresis === 'half_body') {
         return '半身の麻痺';
       }
       return '';

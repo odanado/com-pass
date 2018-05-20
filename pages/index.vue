@@ -9,32 +9,26 @@
         v-for="(event, i) in this.events"
         v-touch="() => handleTransition(event)"
         :key="i"
-        :title="event.title"
-        :place="event.place"/>
+        :event="event"/>
     </div>
   </div>
 </template>
 
 <script>
 import EventCard from '~/components/EventCard.vue';
-// import axios from '~/plugins/axios';
+import axios from '~/plugins/axios';
 
 export default {
   components: {
     EventCard,
   },
   data: () => ({
-    user: {
-      name: '名前',
-    },
-    events: [
-      { title: 'イベント1', place: '場所' },
-      { title: 'イベント2', place: '場所' },
-    ],
   }),
   async asyncData() {
-    // const { data } = await axios.get('/api/users');
-    // return { users: data };
+    const user = (await axios.get('/api/user/0')).data;
+    const events = (await axios.get('/api/events')).data;
+    console.log(events);
+    return { user, events };
   },
   methods: {
     handleTransition(event) {
