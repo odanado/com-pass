@@ -4,7 +4,7 @@
       <div
         class="grid-content">
         <el-button
-          v-if="this.$route.path !== '/'"
+          v-if="!['/', '/config'].includes(this.$route.path)"
           @click="handleBack"
           class="backButton"
           round>
