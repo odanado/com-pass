@@ -4,7 +4,7 @@ const router = Router();
 
 const events = [
   {
-    title: 'ビリヤードをしよう！', name: 'スポーツ', place: '麻布十番', date: '2018/05/20', number: '10', level: { support: '1', paresis: 'one_hand' }, type: '1',
+    title: 'ビリヤードをしよう！', name: 'スポーツ', place: '麻布十番', date: '2018/05/20', number: '10', level: { support: '1', paresis: 'one_hand' }, type: '2',
 
   },
   {
