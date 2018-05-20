@@ -4,18 +4,18 @@ const router = Router();
 
 const events = [
   {
-    title: 'ビリヤードをしよう！', name: 'スポーツ', place: '麻布十番', date: '2018/05/20', number: '10', level: { support: '1', paresis: 'one_hand' }, type: '2',
+    title: '第18回　煌めき☆ボウリング & ビリヤードor卓球', name: 'スポーツ', place: '麻布十番', date: '2018/05/20', number: '10', level: { support: '1', paresis: 'one_hand' }, type: '2',
 
   },
   {
-    title: 'テニスをしよう！', name: 'スポーツ', place: '秋葉原', date: '2018/05/22', number: '10', level: { support: '2', paresis: 'one_hand' }, type: '1',
+    title: '第144回　テニスを楽しもう！　in　東京　☆　～', name: 'スポーツ', place: '秋葉原', date: '2018/05/22', number: '10', level: { support: '2', paresis: 'one_hand' }, type: '1',
 
   },
   {
-    title: '映画を観に行こう', name: '芸術', place: '新宿', date: '2018/05/23', number: '10', level: { support: '1', paresis: 'half_body' }, type: '2',
+    title: '映画同好会のお誘いです☆彡', name: '芸術', place: '新宿', date: '2018/05/23', number: '10', level: { support: '1', paresis: 'half_body' }, type: '2',
   },
   {
-    title: '美術館に行こう！', name: '芸術', place: '千代田', date: '2018/05/24', number: '10', level: { support: '1', paresis: 'two_hand' }, type: '2',
+    title: 'ランチと美術観賞', name: '芸術', place: '千代田', date: '2018/05/24', number: '10', level: { support: '1', paresis: 'two_hand' }, type: '2',
   },
 ];
 
