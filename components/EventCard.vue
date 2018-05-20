@@ -18,9 +18,14 @@
         {{ this.date }}
       </i>
     </div>
-    <el-tag type="success">
-      {{ this.support }}
-    </el-tag>
+    <div>
+      <el-tag type="success">
+        {{ this.getSupport }}
+      </el-tag>
+      <el-tag type="success">
+        {{ this.getParesis }}
+      </el-tag>
+    </div>
   </el-card>
 </template>
 
@@ -42,13 +47,32 @@ export default {
     },
     support: {
       type: String,
-      default: '要支援認定1',
+      default: '1',
+    },
+    paresis: {
+      type: String,
+      default: 'one_hand',
+    },
+  },
+  computed: {
+    getSupport() {
+      return `要支援認定${this.support}`;
+    },
+    getParesis() {
+      if (this.paresis === 'one_hand') {
+        return '片手の麻痺';
+      }
+      // TODO: 後で実装する
+      return '';
     },
   },
 };
 </script>
 
 <style scoped>
+.el-tag {
+  margin-right: 10px;
+}
 .item {
   margin-bottom: 18px;
 }

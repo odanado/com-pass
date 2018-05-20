@@ -1,6 +1,7 @@
 module.exports = {
   plugins: [
     '~plugins/element-ui',
+    '~plugins/touch-events',
   ],
   /*
   ** Headers of the page

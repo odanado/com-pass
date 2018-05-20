@@ -6,12 +6,11 @@
     <div class="cards">
       <EventCard
         class="card"
-        title="タイトル"
-        place="場所"/>
-      <EventCard
-        class="card"
-        title="タイトル"
-        place="場所"/>
+        v-for="(event, i) in this.events"
+        v-touch="() => handleTransition(event)"
+        :key="i"
+        :title="event.title"
+        :place="event.place"/>
     </div>
   </div>
 </template>
@@ -28,14 +27,20 @@ export default {
     user: {
       name: '名前',
     },
-    event: [
-      { name: 'イベント1' },
-      { name: 'イベント2' },
+    events: [
+      { title: 'イベント1', place: '場所' },
+      { title: 'イベント2', place: '場所' },
     ],
   }),
   async asyncData() {
     // const { data } = await axios.get('/api/users');
     // return { users: data };
+  },
+  methods: {
+    handleTransition(event) {
+      console.log(event);
+      this.$router.push('/event/1');
+    },
   },
 };
 </script>
