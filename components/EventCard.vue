@@ -62,7 +62,18 @@ export default {
       if (this.paresis === 'one_hand') {
         return '片手の麻痺';
       }
-      // TODO: 後で実装する
+      if (this.paresis === 'two_hand') {
+        return '両手の麻痺';
+      }
+      if (this.paresis === 'one_leg') {
+        return '片足の麻痺';
+      }
+      if (this.paresis === 'two_leg') {
+        return '両足の麻痺';
+      }
+      if (this.paresis === 'half_body') {
+        return '半身の麻痺';
+      }
       return '';
     },
   },
